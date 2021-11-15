@@ -32,7 +32,7 @@ RUN if [ "$SHA" == "$(sha256sum /tmp/l.tar.gz | awk '{print $1}')" ]; then echo 
 RUN tar -zxvf /tmp/l.tar.gz -C /opt/
 
 # some cleanup
-RUN rm -f /tmp/lc_binary.tar.gz
+RUN rm -f /tmp/l.tar.gz
 
 RUN rm -rf /tmp/glibc-${GLIBC_VERSION}.apk \
     && rm -rf /tmp/glibc-bin-${GLIBC_VERSION}.apk
