@@ -12,11 +12,9 @@ RUN set -ex
 RUN apk update \
         && apk --no-cache add curl
 
-# since the executable is 
-# ELF 64-bit LSB pie executable, x86-64, version 1 (GNU/Linux), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0
-# this guy maintains alpine glibc packages github.com/sgerrand
-
-# curl -fsSL: https://explainshell.com/explain?cmd=curl+-fsSL+example.org
+# since the executable is not running under the base alpine due to missing libraries
+# litecoind is an ELF 64-bit LSB pie executable, x86-64, version 1 (GNU/Linux), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0
+# I found this guys github who maintains alpine glibc packages github.com/sgerrand
 
 RUN                curl -o /tmp/glibc-${GLIBC_VERSION}.apk     -fsSL https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-${GLIBC_VERSION}.apk \
                	&& curl -o /tmp/glibc-bin-${GLIBC_VERSION}.apk -fsSL https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-bin-${GLIBC_VERSION}.apk \
