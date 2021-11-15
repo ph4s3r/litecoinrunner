@@ -1,0 +1,40 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: litecoind
+  namespace: litecoinfarm
+spec:
+  serviceName: "litecoind"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: litecoind
+  template:
+    metadata:
+      labels:
+        app: litecoind
+    spec:
+      containers:
+      - name: litecoind
+        image: peetk/litecoind-alpine:1.0
+        ports:
+        - containerPort: 9333
+          name: conn
+        volumeMounts:
+        - name: litecoindata
+          mountPath: /home/litecoin/.litecoin
+        resources:
+          requests:
+            memory: 2Gi
+          limits:
+            cpu: 2
+            memory: 4Gi
+  volumeClaimTemplates:
+  - metadata:
+      name: litecoindata
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 5Gi
