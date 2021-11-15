@@ -47,12 +47,12 @@ The pipelines I worked with (Teamcity and AzDo) were built to mainly
  - even run some automated health checks, warming cache 
  - etc...
 
-At present task I have difficulty making sense to work with anm adhoc jenkins/gitlab env
+At present task I have difficulty making sense to work with an adhoc jenkins/gitlab env
 Since I guess I would not be able to do anything like the above 
 Other than dissecting my former bash scripts to build the docker image / scan / deploy to k8s in different steps, maybe adding some more steps.
 
 
-## 5
+## 4 & 5
 
 I like to do coding challenges every now and then, I hope this text manipulation-like I solved a while ago in Python will do for the task: [Coderbyte - MinWindowSubstring](https://coderbyte.com/results/peettong:Min%20Window%20Substring:Python3)
 I do have challenge solutions on [codewars](https://www.codewars.com/users/blacklotus) and [hackerrank](https://www.hackerrank.com/peettong?hr_r=1) as well, but text manipulation related ones are all easy challenges
