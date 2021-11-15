@@ -1,11 +1,9 @@
-## Motivation 
+## 1
 Since uphold publishes their official docker container on docker hub, I needed an idea what else (non-trivial) can I do
 
 So I decided to build an alpine based image 
 
 At the end tho, turns out resources are out there on how to do it as alpine is missing some libraries to run the litecoin binaries (comments in the dockerfile) 
-
-## 1
 
 ```bash
 buildanddeploy.bash
