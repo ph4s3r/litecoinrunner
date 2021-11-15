@@ -35,20 +35,22 @@ kubectl apply -f litecoin_statefulset.yaml
 ```
 
 ## 3
-With respect, I might need more definition what this task should really do.
+I apologise if the below sounds rejective towards the assignment, I might not understand the task, forgive me.
 
-The pipelines I worked with were built to mainly
-	- build java/scala project with maven/gradle
-	- store binaries in an artifact store
-	- build docker image, push it to a container registry
-	- pull version-matching helm-charts stored in git repo
-	- deploy kubernetes resources to all environments (qa/uat/prod) (later Azure DevTestLabs were integrated into Build pipelines to run automated and functional tests)
-	- even run some automated health checks, warming cache etc...
+The pipelines I worked with (Teamcity and AzDo) were built to mainly
+ 
+ - build java/scala project with maven/gradle
+ - store binaries in an artifact store
+ - build docker image, push it to a container registry
+ - pull version-matching helm-charts stored in git repo
+ - deploy kubernetes resources to all environments (qa/uat/prod) (later Azure DevTestLabs were integrated into Build pipelines to run automated and functional tests)
+ - even run some automated health checks, warming cache 
+ - etc...
 
-I was working such pipelines in Teamcity and AzDo. At this task I have difficulty understanding what 
-a locally fired up or online jenkins/gitlab environment could provide do anything like the above, other
-than dissecting some bash script to maybe build the docker image / scan / deploy to k8s in 3 steps.
-I`m sorry I did not want this to sound rejective towards the assignment.
+At present task I have difficulty making sense to work with anm adhoc jenkins/gitlab env
+Since I guess I would not be able to do anything like the above 
+Other than dissecting my former bash scripts to build the docker image / scan / deploy to k8s in different steps, maybe adding some more steps.
+
 
 ## 5
 
